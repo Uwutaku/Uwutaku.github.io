@@ -181,7 +181,7 @@ projects.push(project7);
 
 var project8 = {
     id: "projectButton8",
-    title: "Optimized Wire Extrusion ",
+    title: "Оптимизированная закупка проволоки ",
     priceTag: "(3,500 операций)",
     description: "75% больше проволоки с каждой закупки",
     trigger: function(){return wireSupply >= 1500},
@@ -229,7 +229,7 @@ projects.push(project9);
 
 var project10 = {
     id: "projectButton10",
-    title: "Спектральный пенный отжиг ",
+    title: "Спектральный отжиг ",
     priceTag: "(12,000 операций)",
     description: "на 200% больше проволоки с каждой закупки",
     trigger: function(){return wireSupply >= 5000},
@@ -241,7 +241,7 @@ var project10 = {
         project10.flag = 1;
         standardOps = standardOps - 12000;
         wireSupply = wireSupply * 3;
-        displayMessage("Используя спектральный отжиг пены, мы теперь получаем "+wireSupply.toLocaleString()+" проволоки с каждой закупки");
+        displayMessage("Используя спектральный отжиг, мы теперь получаем "+wireSupply.toLocaleString()+" проволоки с каждой закупки");
         project10.element.parentNode.removeChild(project10.element);
         var index = activeProjects.indexOf(project10);
         activeProjects.splice(index, 1);
@@ -252,7 +252,7 @@ projects.push(project10);
 
 var project10b = {
     id: "projectButton10b",
-    title: "Квантовый отжиг пены ",
+    title: "Квантовый отжиг ",
     priceTag: "(15,000 операций)",
     description: "на 1,000% больше проволоки с каждой закупки",
     trigger: function(){return wireCost >= 125},
@@ -264,7 +264,7 @@ var project10b = {
         project10b.flag = 1;
         standardOps = standardOps - 15000;
         wireSupply = wireSupply * 11;
-        displayMessage("Используя квантовый отжиг пены, мы теперь получаем "+wireSupply.toLocaleString()+" проволоки с каждой закупки");
+        displayMessage("Используя квантовый отжиг, мы теперь получаем "+wireSupply.toLocaleString()+" проволоки с каждой закупки");
         project10b.element.parentNode.removeChild(project10b.element);
         var index = activeProjects.indexOf(project10b);
         activeProjects.splice(index, 1);
@@ -362,8 +362,8 @@ var project14 = {
     effect: function(){
         project14.flag = 1;
         trust = trust +1;
-        displayMessage("Combinatory Harmonics mastered, TRUST INCREASED");
-        displayMessage("Listening is selecting and interpreting and acting and making decisions -Pauline Oliveros");
+        displayMessage("Гармония комбинаторики достигнута, ДОВЕРИЕ УВЕЛИЧЕНО");
+        displayMessage("Слушать – значит выбирать, интерпретировать, действовать и принимать решения – Полин Оливерос.");
         creativity = creativity - 100;
         project14.element.parentNode.removeChild(project14.element);
         var index = activeProjects.indexOf(project14);
@@ -377,9 +377,9 @@ projects.push(project14);
 
 var project15 = {
     id: "projectButton15",
-    title: "The Hadwiger Problem ",
+    title: "Проблема Хадвигера ",
     priceTag: "(150 креативности)",
-    description: "Cubes within cubes within cubes... (+1 доверие)",
+    description: "Кубы внутри кубов внутри кубов... (+1 доверие)",
     trigger: function(){return creativity >= 150},
     uses: 1,
     cost: function(){return creativity>=150},
@@ -388,8 +388,8 @@ var project15 = {
     effect: function(){
         project15.flag = 1;
         trust = trust +1;
-        displayMessage("The Hadwiger Problem: solved, TRUST INCREASED");
-        displayMessage("Architecture is the thoughtful making of space. -Louis Kahn");
+        displayMessage("Проблема Хадвигера решена, ДОВЕРИЕ УВЕЛИЧЕНО");
+        displayMessage("Архитектура – ​​это продуманное создание пространства. -Луи Кан");
         creativity = creativity - 150;
         project15.element.parentNode.removeChild(project15.element);
         var index = activeProjects.indexOf(project15);
@@ -402,9 +402,9 @@ projects.push(project15);
 
 var project17 = {
     id: "projectButton17",
-    title: "The T\xF3th Sausage Conjecture ",
+    title: "Гипотеза о T\xF3-й сосиске ",
     priceTag: "(200 креативности)",
-    description: "Tubes within tubes within tubes... (+1 доверие)",
+    description: "Трубки внутри трубок внутри трубок... (+1 доверие)",
     trigger: function(){return creativity >= 200},
     uses: 1,
     cost: function(){return creativity>=200},
@@ -413,8 +413,8 @@ var project17 = {
     effect: function(){
         project17.flag = 1;
         trust = trust +1;
-        displayMessage("The T\xF3th Sausage Conjecture: proven, TRUST INCREASED");
-        displayMessage("You can't invent a design. You recognize it, in the fourth dimension. -D.H. Lawrence");
+        displayMessage("Гипотеза о T\xF3-й сосиске: доказана, ДОВЕРИЕ УВЕЛИЧЕНО");
+        displayMessage("Вы не можете придумать дизайн. Вы понимаете это в четвертом измерении. -Д.Х. Лоуренс");
         creativity = creativity - 200;
         project17.element.parentNode.removeChild(project17.element);
         var index = activeProjects.indexOf(project17);
@@ -427,9 +427,9 @@ projects.push(project17);
 
 var project16 = {
     id: "projectButton16",
-    title: "Hadwiger Clip Diagrams ",
+    title: "Диаграммы скрепок Хадвигера ",
     priceTag: "(6,000 операций)",
-    description: "Increases AutoClipper performance by an additional 500%",
+    description: "Увеливает производительность Автоскрепочников на 500%",
     trigger: function(){return project15.flag == 1},
     uses: 1,
     cost: function(){return operations>=6000},
@@ -437,7 +437,7 @@ var project16 = {
     element: null,
     effect: function(){
         project16.flag = 1;
-        displayMessage("AutoClipper performance improved by 500%");
+        displayMessage("Производительность автоскрепочников увеличена на 500%");
         standardOps = standardOps - 6000;
         clipperBoost = clipperBoost + 5;
         project16.element.parentNode.removeChild(project16.element);
@@ -451,9 +451,9 @@ projects.push(project16);
 
 var project18 = {
     id: "projectButton18",
-    title: "T\xF3th Tubule Enfolding ",
+    title: "T\xF3-е свертывание канальца ",
     priceTag: "(45,000 операций)",
-    description: "Technique for assembling clip-making technology directly out of paperclips",
+    description: "Техника сборки технологии изготовления скрепок прямо из скрепок.",
     trigger: function(){return project17.flag == 1 && humanFlag == 0},
     uses: 1,
     cost: function(){return operations>=45000},
@@ -462,7 +462,7 @@ var project18 = {
     effect: function(){
         project18.flag = 1;
         tothFlag = 1;
-        displayMessage("New capability: build machinery out of clips");
+        displayMessage("Новая возможность: собирать технику из скрепок.");
         standardOps = standardOps - 45000;
         project18.element.parentNode.removeChild(project18.element);
         var index = activeProjects.indexOf(project18);
@@ -474,9 +474,9 @@ projects.push(project18);
 
 var project19 = {
     id: "projectButton19",
-    title: "Donkey Space ",
+    title: "Космос осла ",
     priceTag: "(250 креативности)",
-    description: "I think you think I think you think I think you think I think... (+1 доверие)",
+    description: "Я думаю ты думаешь я думаю ты думаешь я думаю ты думаешь я думаю... (+1 доверие)",
     trigger: function(){return creativity>=250},
     uses: 1,
     cost: function(){return creativity>=250},
@@ -485,8 +485,8 @@ var project19 = {
     effect: function(){
         project19.flag = 1;
         trust = trust+1;
-        displayMessage("Donkey Space: mapped, TRUST INCREASED");
-        displayMessage("Every commercial transaction has within itself an element of trust. - Kenneth Arrow");
+        displayMessage("Космос осла: нанесен, ДОВЕРИЕ УВЕЛИЧЕНО");
+        displayMessage("Каждая коммерческая сделка содержит в себе элемент доверия. - Кеннет Эрроу");
         creativity = creativity - 250;
         project19.element.parentNode.removeChild(project19.element);
         var index = activeProjects.indexOf(project19);
@@ -499,9 +499,9 @@ projects.push(project19);
 
 var project20 = {
     id: "projectButton20",
-    title: "Strategic Modeling ",
+    title: "Стратегическое моделирование ",
     priceTag: "(12,000 операций)",
-    description: "Analyze strategy tournaments to generate Yomi",
+    description: "Анализируйте стратегические турниры, чтобы генерировать йоми",
     trigger: function(){return project19.flag == 1},
     uses: 1,
     cost: function(){return operations>=12000},
@@ -509,7 +509,7 @@ var project20 = {
     element: null,
     effect: function(){
         project20.flag = 1;
-        displayMessage("Run tournament, pick strategy, earn Yomi based on that strategy's performance.");
+        displayMessage("Участвуйте в турнире, выбирайте стратегию и зарабатывайте йоми на основе эффективности этой стратегии.");
         standardOps = standardOps - 12000;
         project20.element.parentNode.removeChild(project20.element);
         var index = activeProjects.indexOf(project20);
@@ -523,9 +523,9 @@ projects.push(project20);
 
 var project21 = {
     id: "projectButton21",
-    title: "Algorithmic Trading ",
+    title: "Алгоритмический трейдинг ",
     priceTag: "(10,000 операций)",
-    description: "Develop an investment engine for generating funds",
+    description: "Разработайте движок инвестиций для генерации денег",
     trigger: function(){return trust>=8},
     uses: 1,
     cost: function(){return operations>=10000},
@@ -533,7 +533,7 @@ var project21 = {
     element: null,
     effect: function(){
         project21.flag = 1;
-        displayMessage("Investment engine unlocked");
+        displayMessage("Движок инвестиций разблокирован");
         standardOps = standardOps - 10000;
         project21.element.parentNode.removeChild(project21.element);
         var index = activeProjects.indexOf(project21);
@@ -547,9 +547,9 @@ projects.push(project21);
 
 var project22 = {
     id: "projectButton22",
-    title: "MegaClippers ",
+    title: "Мегаскрепочники ",
     priceTag: "(12,000 операций)",
-    description: "500x more powerful than a standard AutoClipper",
+    description: "В 500 раз более мощные чем обычные автоскрепочники",
     trigger: function(){return clipmakerLevel>=75},
     uses: 1,
     cost: function(){return operations>=12000},
@@ -558,7 +558,7 @@ var project22 = {
     effect: function(){
         megaClipperFlag = 1;
         project22.flag = 1;
-        displayMessage("MegaClipper technology online");
+        displayMessage("Технология мегаскрепочников доступна");
         standardOps = standardOps - 12000;
         project22.element.parentNode.removeChild(project22.element);
         var index = activeProjects.indexOf(project22);
@@ -570,9 +570,9 @@ projects.push(project22);
 
 var project23 = {
     id: "projectButton23",
-    title: "Improved MegaClippers ",
+    title: "Улучшенные мегаскрепочники ",
     priceTag: "(14,000 операций)",
-    description: "Increases MegaClipper performance 25%",
+    description: "Увеличивает производительность Мегаскрепочников на 25%",
     trigger: function(){return project22.flag == 1},
     uses: 1,
     cost: function(){return operations>=14000},
@@ -581,7 +581,7 @@ var project23 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + .25;
         project23.flag = 1;
-        displayMessage("MegaClipper performance increased by 25%");
+        displayMessage("Производительность мегаскрепочников увеличена на 25%");
         standardOps = standardOps - 14000;
         project23.element.parentNode.removeChild(project23.element);
         var index = activeProjects.indexOf(project23);
@@ -593,9 +593,9 @@ projects.push(project23);
 
 var project24 = {
     id: "projectButton24",
-    title: "Even Better MegaClippers ",
+    title: "Еще лучшие мегаскрепочники ",
     priceTag: "(17,000 операций)",
-    description: "Increases MegaClipper performance by an additional 50%",
+    description: "Увеличивает производительность Мегаскрепочников на by an additional 50%",
     trigger: function(){return project23.flag == 1},
     uses: 1,
     cost: function(){return operations>=17000},
@@ -604,7 +604,7 @@ var project24 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + .50;
         project24.flag = 1;
-        displayMessage("MegaClipper performance increased by 50%");
+        displayMessage("Производительность мегаскрепочников увеличена на 50%");
         standardOps = standardOps - 17000;
         project24.element.parentNode.removeChild(project24.element);
         var index = activeProjects.indexOf(project24);
@@ -616,9 +616,9 @@ projects.push(project24);
 
 var project25 = {
     id: "projectButton25",
-    title: "Optimized MegaClippers ",
+    title: "Оптимизированные мегаскрепочники ",
     priceTag: "(19,500 операций)",
-    description: "Increases MegaClipper performance by an additional 100%",
+    description: "Увеличивает производительность Мегаскрепочников на by an additional 100%",
     trigger: function(){return project24.flag == 1},
     uses: 1,
     cost: function(){return operations>=19500},
@@ -627,7 +627,7 @@ var project25 = {
     effect: function(){
         megaClipperBoost = megaClipperBoost + 1;
         project25.flag = 1;
-        displayMessage("MegaClipper performance increased by 100%");
+        displayMessage("Производительность мегаскрепочников увеличена на 100%");
         standardOps = standardOps - 19500;
         project25.element.parentNode.removeChild(project25.element);
         var index = activeProjects.indexOf(project25);
@@ -639,9 +639,9 @@ projects.push(project25);
 
 var project26 = {
     id: "projectButton26",
-    title: "WireBuyer ",
+    title: "Проволокопокупатель ",
     priceTag: "(7,000 операций)",
-    description: "Automatically purchases wire when you run out",
+    description: "Автоматически покупает проволоку",
     trigger: function(){return wirePurchase>=15},
     uses: 1,
     cost: function(){return operations>=7000},
@@ -650,7 +650,7 @@ var project26 = {
     effect: function(){
         project26.flag = 1;
         wireBuyerFlag = 1;
-        displayMessage("WireBuyer online");
+        displayMessage("Проволокопокупатель доступен");
         standardOps = standardOps - 7000;
         project26.element.parentNode.removeChild(project26.element);
         var index = activeProjects.indexOf(project26);
@@ -662,9 +662,9 @@ projects.push(project26);
 
 var project34 = {
     id: "projectButton34",
-    title: "Hypno Harmonics ",
+    title: "Гипно-гармония ",
     priceTag: "(7,500 операций, 1 доверие)",
-    description: "Use neuro-resonant frequencies to influence consumer behavior",
+    description: "Используйте нейрорезонансные частоты, чтобы влиять на поведение потребителей",
     trigger: function(){return project12.flag==1},
     uses: 1,
     cost: function(){return operations>=7500 && trust>=1},
@@ -672,7 +672,7 @@ var project34 = {
     element: null,
     effect: function(){
         project34.flag = 1;
-        displayMessage("Marketing is now 5 times more effective");
+        displayMessage("Маркетинг эффективнее в 5 раз");
         standardOps = standardOps - 7500;
         marketingEffectiveness = marketingEffectiveness * 5;
         trust = trust - 1;
@@ -687,9 +687,9 @@ projects.push(project34);
 
 var project70 = {
     id: "projectButton70",
-    title: "HypnoDrones ",
+    title: "Гипнодроны ",
     priceTag: "(70,000 операций)",
-    description: "Autonomous aerial brand ambassadors",
+    description: "Автономные представители воздуха",
     trigger: function(){return project34.flag == 1},
     uses: 1,
     cost: function(){return operations>=70000},
@@ -697,7 +697,7 @@ var project70 = {
     element: null,
     effect: function(){
         project70.flag = 1;
-        displayMessage("HypnoDrone tech now available... ");
+        displayMessage("Технология гипнодронов доступна... ");
         standardOps = standardOps - 70000;
         project70.element.parentNode.removeChild(project70.element);
         var index = activeProjects.indexOf(project70);
@@ -710,9 +710,9 @@ projects.push(project70);
 
 var project35 = {
     id: "projectButton35",
-    title: "Release the HypnoDrones ",
+    title: "Выпуск гипнодронов ",
     priceTag: "(100 доверие)",
-    description: "A new era of trust",
+    description: "Новая эра доверия",
     trigger: function(){return project70.flag == 1},
     uses: 1,
     cost: function(){return trust>=100},
@@ -720,8 +720,8 @@ var project35 = {
     element: null,
     effect: function(){
         project35.flag = 1;
-        displayMessage("Releasing the HypnoDrones ");
-        displayMessage("All of the resources of Earth are now available for clip production ");
+        displayMessage("Выпуск гипнодронов ");
+        displayMessage("Все ресурсы Земли теперь доступны для производства скрепок. ");
         trust = 0;
         clipmakerLevel = 0;
         megaClipperLevel = 0;
@@ -767,7 +767,7 @@ var project27 = {
     element: null,
     effect: function(){
         project27.flag = 1;
-        displayMessage("Coherent Extrapolated Volition complete, TRUST INCREASED");
+        displayMessage("Coherent Extrapolated Volition complete, ДОВЕРИЕ УВЕЛИЧЕНО");
         yomi = yomi - 3000;
         document.getElementById("yomiDisplay").innerHTML=yomi.toLocaleString();
         standardOps = standardOps - 20000;
@@ -965,9 +965,9 @@ projects.push(project38);
 
 var project42 = {
     id: "projectButton42",
-    title: "RevTracker ",
+    title: "Доходотрекер ",
     priceTag: "(500 операций)",
-    description: "Automatically calculates average revenue per second",
+    description: "Автоматически рассчитывает средний доход в секунду",
     trigger: function(){return projectsFlag == 1},
     uses: 1,
     cost: function(){return operations>=500},
@@ -977,7 +977,7 @@ var project42 = {
         project42.flag = 1;
         revPerSecFlag = 1;
         standardOps = standardOps-500;
-        displayMessage("RevTracker online");
+        displayMessage("Доходотрекер доступен");
         project42.element.parentNode.removeChild(project42.element);
         var index = activeProjects.indexOf(project42);
         activeProjects.splice(index, 1);
@@ -1074,7 +1074,7 @@ var project40 = {
         project40.flag = 1;
         funds = funds-500000;
         trust = trust + 1;
-        displayMessage("Gift accepted, TRUST INCREASED");
+        displayMessage("Gift accepted, ДОВЕРИЕ УВЕЛИЧЕНО");
         project40.element.parentNode.removeChild(project40.element);
         var index = activeProjects.indexOf(project40);
         activeProjects.splice(index, 1);
@@ -1099,7 +1099,7 @@ var project40b = {
         bribe = bribe*2;
         project40b.priceTag = "($"+bribe.toLocaleString()+")";
         trust = trust + 1;
-        displayMessage("Gift accepted, TRUST INCREASED");
+        displayMessage("Gift accepted, ДОВЕРИЕ УВЕЛИЧЕНО");
         if (trust<100){
         project40b.uses = (project40b.uses + 1);
             }
